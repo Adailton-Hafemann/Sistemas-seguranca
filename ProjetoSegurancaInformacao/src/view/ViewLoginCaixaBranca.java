@@ -117,7 +117,7 @@ public class ViewLoginCaixaBranca extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
 
-       UsuarioDAO dao = new UsuarioDAO();
+       UsuarioDAOCaixaBranca dao = new UsuarioDAOCaixaBranca();
        if(caracterAceito(txtLogin.getText()) && caracterAceito(txtSenha.getText())) {
            
          if(dao.checkLogin(txtLogin.getText(), txtSenha.getText())){
