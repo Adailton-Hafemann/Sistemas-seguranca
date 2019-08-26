@@ -23,21 +23,19 @@ public class UsuarioDAOSQLInjection {
         boolean check = false;
 
         try {
-
-            stmt = con.prepareStatement("SELECT * FROM usuario  WHERE login = "+ login + "and senha = "+ senha);
+            
+            stmt = con.prepareStatement("SELECT * FROM usuario  WHERE login = '" +login  + "' and senha = '" + senha + "'");
         
             rs = stmt.executeQuery();
 
-            if (rs.next()) {
-
-                
+            if (rs.next()) {               
                 check = true;
             }
 
         } catch (SQLException ex) {
             Logger.getLogger(UsuarioDAO.class.getName()).log(Level.SEVERE, null, ex);
         } finally {
-            ConnectionFactory.closeConnection(con, stmt, rs);
+            ConnectionFactory.closeConnection(con, (PreparedStatement) stmt, rs);
         }
 
         return check;

@@ -24,7 +24,7 @@ public class UsuarioDAOCaixaBranca {
 
         try {
             
-            stmt = con.prepareStatement("SELECT * FROM usuario WHERE login = "+ login + "and senha = "+ senha);          
+            stmt = con.prepareStatement("SELECT * FROM usuario WHERE login = '"+ login + "' and senha = '"+ senha+ "'");          
 
             rs = stmt.executeQuery();
 

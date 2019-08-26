@@ -8,16 +8,18 @@ package view;
 import java.awt.event.KeyEvent;
 import javax.swing.JOptionPane;
 import model.dao.UsuarioDAO;
-import model.dao.UsuarioDAOCaixaBranca;
+import model.dao.UsuarioDAOSQLInjection;
 
 /**
  *
  * @author User
  */
-public class ViewLoginCaixaBranca extends javax.swing.JFrame {
+public class ViewLoginSQLInjection extends javax.swing.JFrame {
 
-    
-    public ViewLoginCaixaBranca() {
+    /**
+     * Creates new form TelaLogin
+     */
+    public ViewLoginSQLInjection() {
         initComponents();
     }
 
@@ -117,19 +119,15 @@ public class ViewLoginCaixaBranca extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
 
-       UsuarioDAO dao = new UsuarioDAO();
-       if(caracterAceito(txtLogin.getText()) && caracterAceito(txtSenha.getText())) {
-           
-         if(dao.checkLogin(txtLogin.getText(), txtSenha.getText())){
-            new ViewHome().setVisible(true);
-            this.dispose();
-         }else{
-            JOptionPane.showMessageDialog(null, "Senha incorreta!");
-         }
+       UsuarioDAOSQLInjection dao = new UsuarioDAOSQLInjection();
        
+       if(dao.checkLogin(txtLogin.getText(), txtSenha.getText())){
+           new ViewHome().setVisible(true);
+           this.dispose();
        }else{
            JOptionPane.showMessageDialog(null, "Senha incorreta!");
        }
+
 
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -154,13 +152,13 @@ public class ViewLoginCaixaBranca extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(ViewLoginCaixaBranca.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ViewLoginSQLInjection.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(ViewLoginCaixaBranca.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ViewLoginSQLInjection.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(ViewLoginCaixaBranca.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ViewLoginSQLInjection.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(ViewLoginCaixaBranca.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ViewLoginSQLInjection.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
         //</editor-fold>
@@ -168,12 +166,9 @@ public class ViewLoginCaixaBranca extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new ViewLoginCaixaBranca().setVisible(true);
+                new ViewLoginSQLInjection().setVisible(true);
             }
         });
-    }
-    public static boolean caracterAceito(String valor) {
-		return valor.matches("^[A-Za-z0-9\\s]+");			
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
