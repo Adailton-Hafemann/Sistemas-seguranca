@@ -1,13 +1,5 @@
-## Installation
+Deve ser criado uma seguencia de pastas no diretorio "C".
 
-```
-Para instalar as dependencias do front-end executar o comando `bower install` na raiz do projeto 
-```
-
-```
-Para instalar as dependencias do front-end executar o comando `mvn clean install` na raiz do projeto
-```
-
-
-Utilizar o banco de dados Postgres.
-Criar o database projeto, usuario e senha postgres.
+Deve ser criado uma pasta "imagens" e dentro dela deve ser criado outras com os nomes "publico" e "privado".
+Na pasta publico coloque 2 imagens com os nomes teste2.jpg e teste3.jpg.
+na pasta imagem pode colocar qualquer imagem.
