@@ -1,0 +1,25 @@
+<div class="panel panel-default">
+	<div class="panel-heading">Aplicação para demonstrar a
+		vulnerabilidade Path Traversal</div>
+	<div class="panel-body">
+		<div>Imagens que podem ser Baixadas...</div>
+		<div ng-if="imagens.lenght === 0">Não possui imagem cadastrada</div>
+		<div ng-repeat="item in imagens">
+			<div class="col-md-4 alinhamento">
+				<img class="img-thumbnail tamanho-maximo" src="{{item.caminho}}">
+				<a style="display: block;" href="{{item.caminho}}" download>{{item.nome}}</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="panel panel-default">
+	<div class="panel-heading">Fazer upload de imagem</div>
+	<div class="panel-body">
+		<div class="alinhamento">
+			<input type="file" file-model="myFile" />
+			<button class="btn btn-primary" ng-click="uploadFile()">upload
+				me</button>
+		</div>
+	</div>
+</div>
