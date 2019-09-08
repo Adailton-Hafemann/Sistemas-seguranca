@@ -2,6 +2,13 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/C:/Users/User/Documents/GitHub/Sistemas-seguranca/ProjetoSegurancaInformacao/src/model/dao/UsuarioDAOSQLInjection.java</file>
+            <file>file:/C:/Users/User/Documents/GitHub/Sistemas-seguranca/ProjetoSegurancaInformacao/src/model/dao/UsuarioDAO.java</file>
+            <file>file:/C:/Users/User/Documents/GitHub/Sistemas-seguranca/ProjetoSegurancaInformacao/src/model/dao/UsuarioDAOCaixaBranca.java</file>
+            <file>file:/C:/Users/User/Documents/GitHub/Sistemas-seguranca/ProjetoSegurancaInformacao/src/view/ViewLoginCaixaBranca.java</file>
+            <file>file:/C:/Users/User/Documents/GitHub/Sistemas-seguranca/ProjetoSegurancaInformacao/src/connection/ConnectionFactory.java</file>
+            <file>file:/C:/Users/User/Documents/GitHub/Sistemas-seguranca/ProjetoSegurancaInformacao/src/view/ViewLoginSQLInjection.java</file>
+        </group>
     </open-files>
 </project-private>
