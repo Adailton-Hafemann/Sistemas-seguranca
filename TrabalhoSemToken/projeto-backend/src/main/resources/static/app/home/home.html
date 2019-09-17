@@ -1,0 +1,24 @@
+<div class="panel panel-default">
+	<div class="panel-heading">Lista de contatos</div>
+	<div class="panel-body">
+		<div class="jumbotron">
+			<table class="table table-striped" ng-show="pessoas.length">
+				<tr>
+					<th>Nome</th>
+					<th>Telefone</th>
+				</tr>
+				<tr ng-repeat="item in pessoas">
+					<td>
+						{{item.nome}}
+					</td>
+					<td>
+						{{item.telefone}}
+					</td>
+				</tr>								
+			</table>
+			<div ng-hide="pessoas.length">
+				<div class="alert alert-info" role="alert">Nenhum contato encontrado</div>
+			</div>			
+		</div>
+	</div>
+</div>
